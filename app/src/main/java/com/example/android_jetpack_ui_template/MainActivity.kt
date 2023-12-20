@@ -10,7 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.android_jetpack_ui_template.ui.StackViewAnimation
+import com.example.android_jetpack_ui_template.ui.SwiperTab
 import com.example.android_jetpack_ui_template.ui.theme.Android_jetpack_ui_templateTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,8 +23,10 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    StackViewAnimation()
 //                    Greeting("Android")
+
+//                    StackViewAnimation()
+                      SwiperTab()
                 }
 
             }
