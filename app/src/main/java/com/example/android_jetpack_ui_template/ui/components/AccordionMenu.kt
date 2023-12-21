@@ -1,4 +1,4 @@
-package com.example.android_jetpack_ui_template.ui
+package com.example.android_jetpack_ui_template.ui.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween

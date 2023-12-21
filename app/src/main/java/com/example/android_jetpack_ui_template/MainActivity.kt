@@ -10,8 +10,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.android_jetpack_ui_template.ui.AccordionMenu
-import com.example.android_jetpack_ui_template.ui.SwiperTab
+import com.example.android_jetpack_ui_template.ui.components.AccordionMenu
+import com.example.android_jetpack_ui_template.ui.components.ButtonOrBar
 import com.example.android_jetpack_ui_template.ui.theme.Android_jetpack_ui_templateTheme
 
 class MainActivity : ComponentActivity() {
@@ -27,8 +27,9 @@ class MainActivity : ComponentActivity() {
 //                    Greeting("Android")
 
 //                    StackViewAnimation()
-//                      SwiperTab()
-                    AccordionMenu()
+//                    SwiperTab()
+//                    AccordionMenu()
+//                    ButtonOrBar()
                 }
 
             }
