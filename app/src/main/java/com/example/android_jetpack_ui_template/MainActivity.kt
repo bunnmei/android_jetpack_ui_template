@@ -15,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.app.ActivityCompat
+import com.example.android_jetpack_ui_template.Sencer.Sencer
 import com.example.android_jetpack_ui_template.Service.StartBtn
 import com.example.android_jetpack_ui_template.ui.Grid
 import com.example.android_jetpack_ui_template.ui.SideMenu
@@ -52,7 +53,8 @@ class MainActivity : ComponentActivity() {
 //                    StartBtn(startService =  {
 //                        startService(it)
 //                    })
-                    Blink()
+//                    Blink()
+                      Sencer() // センサーリスト
                 }
 
             }
