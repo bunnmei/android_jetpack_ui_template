@@ -27,13 +27,13 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
 //        Service
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU){
-            ActivityCompat.requestPermissions(
-                this,
-                arrayOf(Manifest.permission.POST_NOTIFICATIONS),
-                0
-            )
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU){
+//            ActivityCompat.requestPermissions(
+//                this,
+//                arrayOf(Manifest.permission.POST_NOTIFICATIONS),
+//                0
+//            )
+//        }
         setContent {
             Android_jetpack_ui_templateTheme {
 
@@ -47,10 +47,10 @@ class MainActivity : ComponentActivity() {
 //                    AccordionMenu()
 //                    ButtonOrBar()
 //                      Grid()
-//                    SideMenu()
-                    StartBtn(startService =  {
-                        startService(it)
-                    })
+                    SideMenu()
+//                    StartBtn(startService =  {
+//                        startService(it)
+//                    })
                 }
 
             }
