@@ -19,6 +19,7 @@ import com.example.android_jetpack_ui_template.Service.StartBtn
 import com.example.android_jetpack_ui_template.ui.Grid
 import com.example.android_jetpack_ui_template.ui.SideMenu
 import com.example.android_jetpack_ui_template.ui.components.AccordionMenu
+import com.example.android_jetpack_ui_template.ui.components.Blink
 import com.example.android_jetpack_ui_template.ui.components.ButtonOrBar
 import com.example.android_jetpack_ui_template.ui.theme.Android_jetpack_ui_templateTheme
 
@@ -47,10 +48,11 @@ class MainActivity : ComponentActivity() {
 //                    AccordionMenu()
 //                    ButtonOrBar()
 //                      Grid()
-                    SideMenu()
+//                    SideMenu()
 //                    StartBtn(startService =  {
 //                        startService(it)
 //                    })
+                    Blink()
                 }
 
             }
