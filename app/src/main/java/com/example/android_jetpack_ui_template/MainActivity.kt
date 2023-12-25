@@ -2,6 +2,7 @@ package com.example.android_jetpack_ui_template
 
 
 import android.Manifest
+import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.view.WindowInsets.Side
@@ -15,6 +16,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import com.example.android_jetpack_ui_template.CAMERA.Image
 import com.example.android_jetpack_ui_template.Sencer.Sencer
 import com.example.android_jetpack_ui_template.Service.StartBtn
 import com.example.android_jetpack_ui_template.ui.Grid
@@ -23,6 +26,16 @@ import com.example.android_jetpack_ui_template.ui.components.AccordionMenu
 import com.example.android_jetpack_ui_template.ui.components.Blink
 import com.example.android_jetpack_ui_template.ui.components.ButtonOrBar
 import com.example.android_jetpack_ui_template.ui.theme.Android_jetpack_ui_templateTheme
+
+//バッテリー残量
+//wi-fiかモバイルネット
+//カルーセル
+//Canvas グラフ
+//Animation SVG
+//Animation Compose
+//Splash Screen
+//ICON
+//USB 転送周り
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,6 +49,13 @@ class MainActivity : ComponentActivity() {
 //                0
 //            )
 //        }
+
+//        CAMERAX
+        if (!hasRequiredPermissions()){
+            ActivityCompat.requestPermissions(
+                this, CAMERA_PERMISSIONS, 0
+            )
+        }
         setContent {
             Android_jetpack_ui_templateTheme {
 
@@ -48,17 +68,35 @@ class MainActivity : ComponentActivity() {
 //                    SwiperTab()
 //                    AccordionMenu()
 //                    ButtonOrBar()
-//                      Grid()
+//                    Grid()
 //                    SideMenu()
 //                    StartBtn(startService =  {
 //                        startService(it)
 //                    })
 //                    Blink()
-                      Sencer() // センサーリスト
+//                      Sencer() // センサーリスト
+                     Image()
                 }
 
             }
         }
+    }
+
+//    CAMERAX
+    private fun hasRequiredPermissions(): Boolean {
+        return CAMERA_PERMISSIONS.all {
+            ContextCompat.checkSelfPermission(
+                applicationContext,
+                it
+            ) == PackageManager.PERMISSION_GRANTED
+        }
+    }
+//CAMERAX
+    companion object {
+        private val CAMERA_PERMISSIONS = arrayOf(
+            Manifest.permission.CAMERA,
+            Manifest.permission.RECORD_AUDIO
+        )
     }
 }
 

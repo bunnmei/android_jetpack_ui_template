@@ -38,7 +38,6 @@ fun Sencer(modifier: Modifier = Modifier) {
                     sensorData = it.values[0]
                 }
             }
-
             override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
 //                TODO("Not yet implemented")
             }
