@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.android_jetpack_ui_template.CAMERA.Image
 import com.example.android_jetpack_ui_template.Sencer.Sencer
 import com.example.android_jetpack_ui_template.Service.StartBtn
@@ -41,7 +42,8 @@ import com.example.android_jetpack_ui_template.ui.theme.Android_jetpack_ui_templ
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+//        スプラッシュスクリーン https://shapeshifter.design/
+        installSplashScreen()
 //        Service
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU){
 //            ActivityCompat.requestPermissions(
@@ -52,11 +54,11 @@ class MainActivity : ComponentActivity() {
 //        }
 
 //        CAMERAX
-        if (!hasRequiredPermissions()){
-            ActivityCompat.requestPermissions(
-                this, CAMERA_PERMISSIONS, 0
-            )
-        }
+//        if (!hasRequiredPermissions()){
+//            ActivityCompat.requestPermissions(
+//                this, CAMERA_PERMISSIONS, 0
+//            )
+//        }
         setContent {
             Android_jetpack_ui_templateTheme {
 
@@ -77,7 +79,8 @@ class MainActivity : ComponentActivity() {
 //                    Blink()
 //                      Sencer() // センサーリスト
 //                     Image()
-                       WebView()
+                     WebView()
+
                 }
 
             }

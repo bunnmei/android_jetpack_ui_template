@@ -85,4 +85,7 @@ dependencies {
     implementation("androidx.camera:camera-extensions:${camerax_version}")
 
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+
+//    スプラッシュスクリーン
+    implementation("androidx.core:core-splashscreen:1.0.1")
 }
