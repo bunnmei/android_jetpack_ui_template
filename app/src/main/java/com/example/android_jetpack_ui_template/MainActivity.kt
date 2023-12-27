@@ -25,6 +25,7 @@ import com.example.android_jetpack_ui_template.ui.SideMenu
 import com.example.android_jetpack_ui_template.ui.components.AccordionMenu
 import com.example.android_jetpack_ui_template.ui.components.Blink
 import com.example.android_jetpack_ui_template.ui.components.ButtonOrBar
+import com.example.android_jetpack_ui_template.ui.components.WebView
 import com.example.android_jetpack_ui_template.ui.theme.Android_jetpack_ui_templateTheme
 
 //バッテリー残量
@@ -75,7 +76,8 @@ class MainActivity : ComponentActivity() {
 //                    })
 //                    Blink()
 //                      Sencer() // センサーリスト
-                     Image()
+//                     Image()
+                       WebView()
                 }
 
             }
