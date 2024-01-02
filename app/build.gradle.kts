@@ -88,4 +88,10 @@ dependencies {
 
 //    スプラッシュスクリーン
     implementation("androidx.core:core-splashscreen:1.0.1")
+
+//    ウィジェット
+    implementation("androidx.glance:glance-appwidget:1.0.0")
+    implementation("androidx.glance:glance-material3:1.0.0")
+
+
 }
